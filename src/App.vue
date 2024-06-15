@@ -8,82 +8,45 @@ import SliderBar from './components/SliderBar.vue';
 </script>
 
 <template>
-  <header>
-  </header>
-  <div>
-    <img src="../public/sun.png" width="50%" height="auto"></img>
-  </div>
-  <div>
-    <LocationForm/>
-    <SliderBar/>
+  <div class="container">
+    <div class="logo">
+      <img src="../public/sun.png" ></img>
+    </div>
+    <div class="form">
+      <LocationForm/>
+    </div>
+    <div class="form">
+      <SliderBar/>
+    </div>
+    <div class="form"> </div>
     <div>
       <WeatherMap/>
       <!-- <LocationsDisplay/> -->
     </div>
-
   </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.container {
+  align-items: center;
+  float: left;
+  width: 100%;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  display:flex;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.logo img {
+  height: 200px;
+  width: 200px;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.form {
+  padding-top: 15px;
 }
 </style>

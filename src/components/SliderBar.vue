@@ -11,9 +11,16 @@
   </script>
 <template>
     <div>
-      <Slider v-model="value" v-on:end="onChange"/>
+      <Slider v-model="value" v-on:end="onChange" 
+      style="
+      --slider-connect-bg: #fbb333;
+      --slider-bg:#7c4c24;
+      --slider-tooltip-bg: #fbb333;
+      "/>
     </div>
   </template>
   
   
-  <style src="@vueform/slider/themes/default.css"></style>
+<style src="@vueform/slider/themes/default.css"  >
+
+</style>
