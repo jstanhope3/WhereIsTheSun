@@ -12,3 +12,7 @@ export const main_loc = reactive({
         this.long = long;
     }
 })
+
+export const nearby_locs = reactive({
+    locs: []
+})
