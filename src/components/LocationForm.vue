@@ -6,9 +6,9 @@ import { main_loc, nearby_locs } from '@/components/state/state.js'
 import wmo_codes from '../../public/wmocodes.json'
 const searchTerm = ref('');
 
-const apiUrl = 'http://api.geonames.org/searchJSON?';
-const nearbyApiURL = 'http://api.geonames.org/findNearbyPlaceNameJSON?'
-const weatherApiUrl = "http://api.open-meteo.com/v1/forecast?forecast_days=1&daily=weather_code&"
+const apiUrl = 'https://api.geonames.org/searchJSON?';
+const nearbyApiURL = 'https://api.geonames.org/findNearbyPlaceNameJSON?'
+const weatherApiUrl = "https://api.open-meteo.com/v1/forecast?forecast_days=1&daily=weather_code&"
 
 async function getWeather(lat, long) {
     const weatherRequest = weatherApiUrl + `latitude=${lat}&longitude=${long}`

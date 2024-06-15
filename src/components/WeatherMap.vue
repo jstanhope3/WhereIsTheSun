@@ -46,9 +46,9 @@ const marker = ref([main_loc.lat, main_loc.long])
     <ol-vector-layer :zIndex="2" v-for="nearby_loc in nearby_locs.locs">
       <ol-source-vector>
         <ol-feature ref="positionFeature">
-          <ol-geom-point :coordinates="[nearby_loc.long, nearby_loc.lat]"></ol-geom-point>
+          <ol-geom-point :coordinates="[nearby_loc['long'], nearby_loc['lat']]"></ol-geom-point>
           <ol-style>
-            <ol-style-icon :src="nearby_loc.weatherDesc.day.image" :scale="0.5"></ol-style-icon>
+            <ol-style-icon :src="nearby_loc['weatherDesc']['day']['image']" :scale="0.5"></ol-style-icon>
           </ol-style>
         </ol-feature>
       </ol-source-vector>
